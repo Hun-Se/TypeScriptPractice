@@ -33,11 +33,28 @@ const player4: readonly [string, number, boolean] = ["sehun", 12, false];
 8. overroding 서로다른 여러개의 call signature를 가질 때 사용한다
 9. 다형성(polymorphism)은 여러가지 다른 구조, 모양, 형태를 뜻한다. 타입스크립트는 2~3개의 파라미터를 가질 수 있는데 그 파라미터들은 다양한 type을 가질 수 있다는 특징이다.
 
-10. 타입 제한: type과 interface 둘다 객체의 모양을 설정해주지만 type 키워드는 인터페이스에 비해 사용 하는 곳이 많다. interface는 오브젝트의 모양을 알려줄때 사용될 수 있는데 type 보다 더 객체지향 프로그래밍처럼 보여서 보다 이해하기 쉬워 보인다.
+10. 타입 제한: type과 interface 둘다 객체의 모양을 설정해주지만 type 키워드는 인터페이스에 비해 사용 하는 곳이 많다.(둘다 추상 클래스를 대체 할 수 있다.) interface는 오브젝트의 모양을 알려줄때 사용될 수 있는데 type 보다 더 객체지향 프로그래밍처럼 보여서 보다 이해하기 쉬워 보인다.
 
 - interface는 같은 이름을 가진 property들을 쌓을 수 있다.
 - interface는 자바스크립트로 컴파일될 때 보이지 않는다.
 - interface는 private과 protected로 상속되지 못한다.
+- interface를 상속 할 때에는 `extends` 대신 `implements`를 사용한다.
+
+```TypeScript
+class Player implements User {
+    constructor(
+        public firstName:string,
+        public lastName:string,
+        public health:number
+    ) {}
+    fullName() {
+        return `${this.firstName} ${this.lastName}`
+    }
+    sayHi(name:string) {
+        return `Hello ${name}. My name is ${this.fullName()}`
+    }
+}
+```
 
 11. 추상클래스는 상속받는 다른 클래스가 가질 property와 메소드를 지정하도록 도와준다.
 
