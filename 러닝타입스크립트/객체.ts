@@ -66,24 +66,43 @@
 
 // poetLater = "Emily Dicknson";
 
-type FirstAndLastNames = {
-  first: string;
-  last: string;
+// type FirstAndLastNames = {
+//   first: string;
+//   last: string;
+// };
+
+// const hasBoth: FirstAndLastNames = {
+//   first: "Sehun",
+//   last: "Kim",
+// };
+
+// const hasOnlyOne: FirstAndLastNames = {
+//   first: "Sehun",
+// };
+
+// type TimeRange = {
+//   start: Date;
+// };
+
+// const hasStartString: TimeRange = {
+//   start: "1879-2-13",
+// };
+
+type Poet = {
+  born: number;
+  name: string;
 };
 
-const hasBoth: FirstAndLastNames = {
-  first: "Sehun",
-  last: "Kim",
+const existingObject2: Poet = {
+  activity: "walking",
+  born: 1935,
+  name: "Mary Oliver",
 };
 
-const hasOnlyOne: FirstAndLastNames = {
-  first: "Sehun",
+const existingObject = {
+  activity: "walking",
+  born: 1935,
+  name: "Mary Oliver",
 };
 
-type TimeRange = {
-  start: Date;
-};
-
-const hasStartString: TimeRange = {
-  start: "1879-2-13",
-};
+const extraPropertyButOk: Poet = existingObject;
