@@ -88,21 +88,142 @@
 //   start: "1879-2-13",
 // };
 
-type Poet = {
-  born: number;
-  name: string;
-};
+// type Poet = {
+//   born: number;
+//   name: string;
+// };
 
-const existingObject2: Poet = {
-  activity: "walking",
-  born: 1935,
-  name: "Mary Oliver",
-};
+// const existingObject2: Poet = {
+//   activity: "walking",
+//   born: 1935,
+//   name: "Mary Oliver",
+// };
 
-const existingObject = {
-  activity: "walking",
-  born: 1935,
-  name: "Mary Oliver",
-};
+// const existingObject = {
+//   activity: "walking",
+//   born: 1935,
+//   name: "Mary Oliver",
+// };
 
-const extraPropertyButOk: Poet = existingObject;
+// const extraPropertyButOk: Poet = existingObject;
+
+// type Poem = {
+//   author: {
+//     firstName: string;
+//     lastName: string;
+//   };
+//   name: string;
+// };
+
+// const poemMathch: Poem = {
+//   author: {
+//     firstName: "Kim",
+//     lastName: "Sehun",
+//   },
+//   name: "Lady Lazerus",
+// };
+
+// const poemMismatch: Poem = {
+//   author: {
+//     name: "Sylvia Plath",
+
+//   }
+//   name: "Sehun"
+// }
+
+// type Book = {
+//   author?: string;
+//   pages: number;
+// };
+
+// const ok: Book = {
+//   author: undefined,
+//   pages: 90,
+// };
+
+// const missing: Book = {
+//   pages: 1,
+// };
+
+// const poem =
+//   Math.random() > 0.5
+//     ? { name: "The Double Image", pages: 7 }
+//     : { name: "Her Kind", rhymes: true };
+
+// poem.name;
+// poem.pages;
+// poem.rhymes;
+
+// type PoemWithPages = {
+//   name: string;
+//   pages: number;
+// };
+
+// type PoemWithRhymes = {
+//   name: string;
+//   rhymes: boolean;
+// };
+
+// type Poem = PoemWithPages | PoemWithRhymes;
+
+// const poem: Poem =
+//   Math.random() > 0.5
+//     ? { name: "the double", pages: 7 }
+//     : { name: "Her Kind", rhymes: true };
+
+// poem.name;
+// poem.pages;
+// poem.rhymes;
+
+// if ("pages" in poem) {
+//   poem.pages;
+// } else {
+//   poem.rhymes;
+// }
+
+// if (poem.pages) {
+// }
+
+// type PoemWithPages = {
+//   name: string;
+//   pages: number;
+//   type: "pages";
+// };
+
+// type PoemWithRhymes = {
+//   name: string;
+//   rhymes: boolean;
+//   type: "rhymes";
+// };
+
+// type Poem = PoemWithPages | PoemWithRhymes;
+
+// const poem: Poem =
+//   Math.random() > 0.5
+//     ? { name: "The Double Image", pages: 7, type: "pages" }
+//     : { name: "Her Kind", rhymes: true, type: "rhymes" };
+
+// if (poem.type === "pages") {
+//   console.log(`It's got pages: ${poem.pages}`);
+// } else {
+//   console.log(`이건 ryhmes: ${poem.rhymes}`);
+// }
+
+// poem.type;
+
+// poem.pages;
+
+// type ShortPoem = { author: string } & (
+//   | { kigo: string; type: "haiku" }
+//   | { meter: number; type: "vill" }
+// );
+
+// const morningGlory: ShortPoem = {
+//   author: "Funke",
+//   kigo: "Morning",
+//   type: "vill",
+// };
+
+// type NotPossible = number & string;
+
+// let notNumber: NotPossible = 0;
